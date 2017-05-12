@@ -1,0 +1,7 @@
+const GINGHAM_MODE = false
+const STRIPES_PER_SQUARE = 16
+
+export {
+	GINGHAM_MODE,
+	STRIPES_PER_SQUARE
+}
