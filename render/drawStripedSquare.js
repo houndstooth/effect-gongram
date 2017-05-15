@@ -1,5 +1,4 @@
-import { STRIPES_PER_SQUARE } from '../common/customize'
-import { UNIT } from '../../shared/common/customize'
+import { UNIT, STRIPE_COUNT } from '../../shared/common/customize'
 import render from '../../shared/render/render'
 import iterator from '../../shared/utilities/iterator'
 import scaleOrigin from '../../shared/utilities/scaleOrigin'
@@ -9,10 +8,10 @@ export default ({ origin, size, originColor, otherColor }) => {
 	const sizedUnit = size * UNIT
 
 	let color
-	let stripeWidthInTermsOfPerimeter = 2 / STRIPES_PER_SQUARE
+	let stripeWidthInTermsOfPerimeter = 2 / STRIPE_COUNT
 	let currentPositionAlongPerimeter
 
-	iterator(STRIPES_PER_SQUARE).forEach(i => {
+	iterator(STRIPE_COUNT).forEach(i => {
 		currentPositionAlongPerimeter = i * stripeWidthInTermsOfPerimeter
 		color = i % 2 == 1 ? originColor : otherColor
 
