@@ -1,10 +1,10 @@
 import { UNIT, STRIPE_COUNT } from '../../shared/common/customize'
 import render from '../../shared/render/render'
 import iterator from '../../shared/utilities/iterator'
-import scaleOrigin from '../../shared/utilities/scaleOrigin'
+import scalePoint from '../../shared/utilities/scalePoint'
 
 export default ({ origin, size, originColor, otherColor }) => {
-	origin = scaleOrigin({ origin })
+	origin = scalePoint({ point: origin })
 	const sizedUnit = size * UNIT
 
 	let color
