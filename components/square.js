@@ -1,5 +1,5 @@
 import mixColors from '../utilities/mixColors'
-import drawStripedSquare from '../../shared/render/drawStripedSquare'
+import tile from '../../shared/components/tile'
 import { SQUARE_SIZE } from '../../shared/common/customize'
 import { GINGHAM_MODE } from '../common/customize'
 
@@ -15,20 +15,19 @@ export default ({ x, y }) => {
 	const xColor = GONGRAM_COLORS[ x % 5 ]
 	const yColor = GONGRAM_COLORS[ (y * 2) % 5 ]
 
+	let originColor, otherColor
 	if (GINGHAM_MODE) {
-		const mixedColor = mixColors(xColor, yColor)
-		drawStripedSquare({
-			origin: [ x * SQUARE_SIZE, y * SQUARE_SIZE ],
-			size: SQUARE_SIZE,
-			originColor: mixedColor,
-			otherColor: mixedColor
-		})
+		originColor = mixColors(xColor, yColor)
+		otherColor = mixColors(xColor, yColor)
 	} else {
-		drawStripedSquare({
-			origin: [ x * SQUARE_SIZE, y * SQUARE_SIZE ],
-			size: SQUARE_SIZE,
-			originColor: yColor,
-			otherColor: xColor
-		})
+		originColor = yColor
+		otherColor = xColor
 	}
+
+	tile({
+		origin: [ x * SQUARE_SIZE, y * SQUARE_SIZE ],
+		size: SQUARE_SIZE,
+		originColor,
+		otherColor
+	})
 }
