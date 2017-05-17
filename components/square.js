@@ -1,6 +1,6 @@
 import mixColors from '../utilities/mixColors'
 import drawSolidSquare from '../../shared/render/drawSolidSquare'
-import drawStripedSquare from '../render/drawStripedSquare'
+import drawStripedSquare from '../../shared/render/drawStripedSquare'
 import { SQUARE_SIZE } from '../../shared/common/customize'
 import { GINGHAM_MODE } from '../common/customize'
 
@@ -14,7 +14,7 @@ const GONGRAM_COLORS = [
 
 export default ({ x, y }) => {
 	const xColor = GONGRAM_COLORS[ x % 5 ]
-	const yColor = GONGRAM_COLORS[ y % 5 ]
+	const yColor = GONGRAM_COLORS[ (y * 2) % 5 ]
 
 	if (GINGHAM_MODE) {
 		drawSolidSquare({
@@ -26,8 +26,8 @@ export default ({ x, y }) => {
 		drawStripedSquare({
 			origin: [ x * SQUARE_SIZE, y * SQUARE_SIZE ],
 			size: SQUARE_SIZE,
-			originColor: xColor,
-			otherColor: yColor
+			originColor: yColor,
+			otherColor: xColor
 		})
 	}
 }
