@@ -9,10 +9,12 @@ const GONGRAM_COLORS = [
 	"#f00"
 ]
 
-const GONGRAM_SUPERTILE = iterator(GRID_SIZE).map(x => iterator(GRID_SIZE).map(y => ({
-	originColor: GONGRAM_COLORS[ (y * 2) % 5 ],
-	otherColor: GONGRAM_COLORS[ x % 5 ]
-})))
+const GONGRAM_SUPERTILE = iterator(GRID_SIZE).map(x => iterator(GRID_SIZE).map(y => {
+	return [
+		GONGRAM_COLORS[ (y * 2) % 5 ],
+		GONGRAM_COLORS[ x % 5 ]
+	]
+}))
 
 export {
 	GONGRAM_SUPERTILE
