@@ -1,13 +1,8 @@
 import iterator from '../../shared/utilities/iterator'
 import { GRID_SIZE } from '../../shared/common/customize'
+import { BLACK, BLUE, WHITE, GREEN, RED } from '../../shared/common/constants'
 
-const GONGRAM_COLORS = [
-	{ 'r': 0, 'g': 0, 'b': 0, 'a': 1 },       // black
-	{ 'r': 0, 'g': 0, 'b': 255, 'a': 1 },     // blue
-	{ 'r': 255, 'g': 255, 'b': 255, 'a': 1 }, // white
-	{ 'r': 0, 'g': 255, 'b': 0, 'a': 1 },     // green
-	{ 'r': 255, 'g': 0, 'b': 0, 'a': 1 }      // red
-]
+const GONGRAM_COLORS = [ BLACK, BLUE, WHITE, GREEN, RED ]
 
 const GONGRAM_SUPERTILE = iterator(GRID_SIZE).map(x => iterator(GRID_SIZE).map(y => {
 	return [
