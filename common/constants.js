@@ -1,6 +1,6 @@
 import iterator from '../../shared/utilities/iterator'
 import { GRID_SIZE } from '../../shared/common/customize'
-import { BLACK, BLUE, WHITE, GREEN, RED } from '../../shared/common/constants'
+import { BLACK, BLUE, WHITE, GREEN, RED } from '../../shared/common/colors'
 
 const GONGRAM_COLORS = [ BLACK, BLUE, WHITE, GREEN, RED ]
 
