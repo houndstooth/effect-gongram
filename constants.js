@@ -1,6 +1,6 @@
 import iterator from '../shared/utilities/iterator'
 import state from '../state'
-import { BLACK, BLUE, WHITE, GREEN, RED } from '../shared/common/colors'
+import { BLACK, BLUE, WHITE, GREEN, RED } from '../shared/render/colors'
 
 const GONGRAM_COLORS = [ BLACK, BLUE, WHITE, GREEN, RED ]
 
