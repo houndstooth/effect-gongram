@@ -1,13 +1,5 @@
 import iterator from '../shared/utilities/iterator'
-
-import { BLACK, BLUE, WHITE, GREEN, RED } from '../shared/application/constants'
-
-const GONGRAM_SUPERTILE = iterator(5).map(x => iterator(5).map(y => {
-	return [
-		(y * 2) % 5,
-		x % 5
-	]
-}))
+import { BLACK, BLUE, GREEN, RED, WHITE } from '../shared/application/constants'
 
 export default {
 	state: {
@@ -16,7 +8,11 @@ export default {
 				colors: [ BLACK, BLUE, WHITE, GREEN, RED ],
 				colorAssignment: {
 					supertile: {
-						tiles: GONGRAM_SUPERTILE
+						tiles: iterator(5).map(x => iterator(5).map(y => [ (y * 2) % 5, x ]))
+					},
+					weave: {
+						rows: iterator(5).map(y => (y * 2) % 5),
+						columns: iterator(5)
 					}
 				}
 			}
