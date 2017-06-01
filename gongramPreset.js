@@ -4,7 +4,7 @@ import { BLACK, BLUE, GREEN, RED, WHITE } from '../shared/application/constants'
 export default {
 	state: {
 		shared: {
-			color: {
+			colorConfig: {
 				set: [ BLACK, BLUE, WHITE, GREEN, RED ],
 				assignment: {
 					supertile: iterator(5).map(x => iterator(5).map(y => [ (y * 2) % 5, x ])),
