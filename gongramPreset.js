@@ -1,5 +1,5 @@
-import iterator from '../shared/utilities/iterator'
-import { BLACK, BLUE, GREEN, RED, WHITE } from '../shared/application/constants'
+import iterator from '../../utilities/iterator'
+import { BLACK, BLUE, GREEN, RED, WHITE } from '../../application/constants'
 
 export default {
 	state: {
