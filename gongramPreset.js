@@ -1,4 +1,4 @@
-import iterator from '../../utilities/iterator'
+import codeUtilities from '../../utilities/codeUtilities'
 import { BLACK, BLUE, GREEN, RED, WHITE } from '../../application/constants'
 
 export default {
@@ -6,17 +6,17 @@ export default {
 		colorConfig: {
 			set: [ BLACK, BLUE, WHITE, GREEN, RED ],
 			assignment: {
-				supertile: iterator(5).map(x => iterator(5).map(y => [ (y * 2) % 5, x ])),
+				supertile: codeUtilities.iterator(5).map(x => codeUtilities.iterator(5).map(y => [ (y * 2) % 5, x ])),
 				weave: {
-					rows: iterator(5).map(y => (y * 2) % 5),
-					columns: iterator(5)
+					rows: codeUtilities.iterator(5).map(y => (y * 2) % 5),
+					columns: codeUtilities.iterator(5)
 				}
 			},
 			houndazzle: {
 				colorConfig: {
 					assignment: {
 						mode: 'SUPERTILE',
-						supertile: iterator(5).map(x => iterator(5).map(y => [ x, (y * 2) % 5 ]))
+						supertile: codeUtilities.iterator(5).map(x => codeUtilities.iterator(5).map(y => [ x, (y * 2) % 5 ]))
 					}
 				},
 				orientationConfig: {
