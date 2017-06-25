@@ -1,5 +1,5 @@
 import codeUtilities from '../../utilities/codeUtilities'
-import { BLACK, BLUE, GREEN, RED, WHITE } from '../../application/constants'
+import { BLACK, BLUE, GREEN, RED, WHITE } from '../../constants'
 
 export default {
 	state: {
