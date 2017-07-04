@@ -1,5 +1,5 @@
-import codeUtilities from '../../src/utilities/codeUtilities'
-import { BLACK, BLUE, GREEN, RED, WHITE } from '../../src/constants'
+import codeUtilities from '../../../src/utilities/codeUtilities'
+import { BLACK, BLUE, GREEN, RED, WHITE } from '../../../src/constants'
 
 export default {
 	initial: {
