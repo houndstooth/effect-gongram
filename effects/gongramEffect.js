@@ -15,13 +15,13 @@ export default {
 			houndazzle: {
 				colorSettings: {
 					assignment: {
-						mode: 'SUPERTILE',
+						assignmentMode: 'SUPERTILE',
 						supertile: codeUtilities.iterator(5).map(x => codeUtilities.iterator(5).map(y => [ x, (y * 2) % 5 ])),
 					},
 				},
 				orientationSettings: {
 					assignment: {
-						mode: 'WEAVE',
+						assignmentMode: 'WEAVE',
 						weave: { rows: [ 1, 0 ], columns: [ 0, 1 ] },
 					},
 				},
