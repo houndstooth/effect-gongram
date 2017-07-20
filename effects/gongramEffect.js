@@ -2,7 +2,7 @@ import codeUtilities from '../../../src/utilities/codeUtilities'
 import { BLACK, BLUE, GREEN, RED, WHITE } from '../../../src/constants'
 
 export default {
-	initial: {
+	base: {
 		colorSettings: {
 			set: [ BLACK, BLUE, WHITE, GREEN, RED ],
 			assignment: {
