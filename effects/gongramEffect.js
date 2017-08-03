@@ -3,6 +3,7 @@ import gongramSupertile from '../src/utilities/gongramSupertile'
 import gongramWeave from '../src/utilities/gongramWeave'
 
 export default {
+	name: 'gongram',
 	basePattern: {
 		colorSettings: {
 			set: [ BLACK, BLUE, WHITE, GREEN, RED ],
