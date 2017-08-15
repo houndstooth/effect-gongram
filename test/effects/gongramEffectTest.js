@@ -4,7 +4,7 @@ import standardTileIsColors from '../../../../test/integration/helpers/standardT
 import activateTestMarkerCanvas from '../../../../test/integration/helpers/activateTestMarkerCanvas'
 import { BLACK, BLUE, WHITE, GREEN, RED } from '../../../../src/constants'
 import store from '../../../../store'
-import resetStore from '../../../../test/helpers/resetStore'
+import resetStore from '../../../../src/store/resetStore'
 import gongramEffect from '../../effects/gongramEffect'
 
 describe('gongram coloration', () => {
