@@ -1,5 +1,4 @@
-import execute from '../../../../src/application/execute'
-import composeMainHoundstooth from '../../../../src/store/composeMainHoundstooth'
+import executeSelectedHoundstoothEffects from '../../../../src/interface/executeSelectedHoundstoothEffects'
 import standardTileIsColors from '../../../../test/integration/helpers/standardTileIsColors'
 import activateTestMarkerCanvas from '../../../../test/integration/helpers/activateTestMarkerCanvas'
 import { BLACK, BLUE, WHITE, GREEN, RED } from '../../../../src/constants'
@@ -13,25 +12,23 @@ describe('gongram coloration', () => {
 	it('arranges the 5 MTG colors by rows in the cycle of allies, and by columns in the cycle of enemies', () => {
 		const tileSizeInPixels = 50
 		const sufficientGridSizeToDemonstratePattern = 10
-		composeMainHoundstooth({
-			houndstoothEffects: [ gongramEffect ],
-			houndstoothOverrides: {
-				basePattern: {
-					tileSettings: {
-						tileSizeSetting: tileSizeInPixels,
-					},
-					viewSettings: {
-						canvasSize: sufficientGridSizeToDemonstratePattern * tileSizeInPixels,
-					},
-					gridSettings: {
-						gridSize: sufficientGridSizeToDemonstratePattern,
-					},
+		store.selectedHoundstoothEffects = [ gongramEffect ]
+		const houndstoothOverrides = {
+			basePattern: {
+				tileSettings: {
+					tileSizeSetting: tileSizeInPixels,
+				},
+				viewSettings: {
+					canvasSize: sufficientGridSizeToDemonstratePattern * tileSizeInPixels,
+				},
+				gridSettings: {
+					gridSize: sufficientGridSizeToDemonstratePattern,
 				},
 			},
-		})
+		}
 		activateTestMarkerCanvas()
 
-		execute()
+		executeSelectedHoundstoothEffects({ houndstoothOverrides })
 
 		const rowOneTiles = [
 			{
