@@ -2,17 +2,17 @@ import executeSelectedHoundstoothEffects from '../../../../src/execute/executeSe
 import standardTileIsColors from '../../../../test/integration/helpers/standardTileIsColors'
 import activateTestMarkerCanvas from '../../../../test/integration/helpers/activateTestMarkerCanvas'
 import { BLACK, BLUE, WHITE, GREEN, RED } from '../../../../src/constants'
-import store from '../../../../store'
-import resetStore from '../../../../src/store/resetStore'
+import state from '../../../../state'
+import resetState from '../../../../src/store/resetState'
 import gongramEffect from '../../effects/gongramEffect'
 
 describe('gongram coloration', () => {
-	beforeEach(() => resetStore(store))
+	beforeEach(() => resetState(state))
 
 	it('arranges the 5 MTG colors by rows in the cycle of allies, and by columns in the cycle of enemies', () => {
 		const tileSizeInPixels = 50
 		const sufficientGridSizeToDemonstratePattern = 10
-		store.selectedHoundstoothEffects = [ gongramEffect ]
+		state.selectedHoundstoothEffects = [ gongramEffect ]
 		const houndstoothOverrides = {
 			basePattern: {
 				tileSettings: {
