@@ -1,4 +1,4 @@
-import executeSelectedHoundstoothEffects from '../../../../src/controls/executeSelectedHoundstoothEffects'
+import executeSelectedHoundstoothEffects from '../../../../src/execute/executeSelectedHoundstoothEffects'
 import standardTileIsColors from '../../../../test/integration/helpers/standardTileIsColors'
 import activateTestMarkerCanvas from '../../../../test/integration/helpers/activateTestMarkerCanvas'
 import { BLACK, BLUE, WHITE, GREEN, RED } from '../../../../src/constants'
