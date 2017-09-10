@@ -5,7 +5,7 @@ export default {
 	name: 'gongram',
 	basePattern: {
 		colorSettings: {
-			set: [ BLACK, BLUE, WHITE, GREEN, RED ],
+			colorSet: [ BLACK, BLUE, WHITE, GREEN, RED ],
 			assignment: {
 				supertile: gongramSrc.gongramSupertile(),
 				weave: gongramSrc.gongramWeave(),
