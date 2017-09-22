@@ -1,5 +1,5 @@
 import { BLACK, BLUE, GREEN, RED, WHITE } from '../../../src/constants'
-import gongramSrc from '../src'
+import { gongramSupertile, gongramWeave } from '../src'
 
 export default {
 	name: 'gongram',
@@ -7,8 +7,8 @@ export default {
 		colorSettings: {
 			colorSet: [ BLACK, BLUE, WHITE, GREEN, RED ],
 			assignment: {
-				supertile: gongramSrc.gongramSupertile(),
-				weave: gongramSrc.gongramWeave(),
+				supertile: gongramSupertile(),
+				weave: gongramWeave(),
 			},
 		},
 	},

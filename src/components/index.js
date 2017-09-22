@@ -1,7 +1,7 @@
 import gongramSupertile from './gongramSupertile'
 import gongramWeave from './gongramWeave'
 
-export default {
+export {
 	gongramSupertile,
 	gongramWeave,
 }

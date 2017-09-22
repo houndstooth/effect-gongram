@@ -1,8 +1,6 @@
-import components from './components'
+import { gongramSupertile, gongramWeave } from './components'
 
-const { gongramSupertile, gongramWeave } = components
-
-export default {
+export {
 	gongramSupertile,
 	gongramWeave,
 }

@@ -1,7 +1,3 @@
-import effects from './effects'
+import { gongramEffect } from './effects'
 
-const { gongramEffect } = effects
-
-export default {
-	gongramEffect,
-}
+export { gongramEffect }
