@@ -1,7 +1,7 @@
 import { BLACK, BLUE, GREEN, RED, WHITE } from '../../../src/constants'
 import { gongramSupertile, gongramWeave } from '../src'
 
-export default {
+const gongramEffect = {
 	name: 'gongram',
 	basePattern: {
 		colorSettings: {
@@ -13,3 +13,5 @@ export default {
 		},
 	},
 }
+
+export default gongramEffect
