@@ -2,7 +2,7 @@ import executeSelectedHoundstoothEffects from '../../../../src/execute/executeSe
 import standardTileIsColors from '../../../../test/integration/helpers/standardTileIsColors'
 import activateTestMarkerCanvas from '../../../../test/integration/helpers/activateTestMarkerCanvas'
 import { BLACK, BLUE, WHITE, GREEN, RED } from '../../../../src/constants'
-import state from '../../../../state'
+import state from '../../../../src/state'
 import resetState from '../../../../src/store/resetState'
 import gongramEffect from '../../effects/gongramEffect'
 

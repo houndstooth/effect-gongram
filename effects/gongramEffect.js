@@ -1,5 +1,7 @@
-import { BLACK, BLUE, GREEN, RED, WHITE } from '../../../src/constants'
+import { constants } from '../../../src'
 import { gongramSupertile, gongramWeave } from '../src'
+
+const { BLACK, BLUE, GREEN, RED, WHITE } = constants
 
 const gongramEffect = {
 	name: 'gongram',
