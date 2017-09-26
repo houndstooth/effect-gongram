@@ -1,4 +1,4 @@
-import gongramSupertile from '../../../src/components/gongramSupertile'
+import gongramSupertile from '../../../../src/components/gongramSupertile'
 
 describe('gongram supertile', () => {
 	it('makes a rank-2 array with addresses for the 5 colors, where one dimension goes by 2s and the other by 1s', () => {

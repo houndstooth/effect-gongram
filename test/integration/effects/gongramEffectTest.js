@@ -1,10 +1,10 @@
-import executeSelectedHoundstoothEffects from '../../../../src/execute/executeSelectedHoundstoothEffects'
-import standardTileIsColors from '../../../../test/integration/helpers/standardTileIsColors'
-import activateTestMarkerCanvas from '../../../../test/integration/helpers/activateTestMarkerCanvas'
-import { BLACK, BLUE, WHITE, GREEN, RED } from '../../../../src/constants'
-import state from '../../../../src/state'
-import resetState from '../../../../src/store/resetState'
-import gongramEffect from '../../effects/gongramEffect'
+import executeSelectedHoundstoothEffects from '../../../../../src/execute/executeSelectedHoundstoothEffects'
+import standardTileIsColors from '../../../../../test/integration/helpers/standardTileIsColors'
+import activateTestMarkerCanvas from '../../../../../test/integration/helpers/activateTestMarkerCanvas'
+import { BLACK, BLUE, WHITE, GREEN, RED } from '../../../../../src/constants'
+import state from '../../../../../src/state'
+import resetState from '../../../../../src/store/resetState'
+import gongramEffect from '../../../effects/gongramEffect'
 
 describe('gongram coloration', () => {
 	beforeEach(() => resetState(state))
