@@ -3,12 +3,9 @@ import standardTileIsColors from '../../../../../test/integration/helpers/standa
 import activateTestMarkerCanvas from '../../../../../test/integration/helpers/activateTestMarkerCanvas'
 import { BLACK, BLUE, WHITE, GREEN, RED } from '../../../../../src/constants'
 import state from '../../../../../src/state'
-import resetState from '../../../../../src/store/resetState'
 import gongramEffect from '../../../effects/gongramEffect'
 
 describe('gongram coloration', () => {
-	beforeEach(() => resetState(state))
-
 	it('arranges the 5 MTG colors by rows in the cycle of allies, and by columns in the cycle of enemies', () => {
 		const tileSizeInPixels = 50
 		const sufficientGridSizeToDemonstratePattern = 10
