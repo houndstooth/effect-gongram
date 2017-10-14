@@ -7,16 +7,16 @@ import gongramEffect from '../../../effects/gongramEffect'
 
 describe('gongram coloration', () => {
 	it('arranges the 5 MTG colors by rows in the cycle of allies, and by columns in the cycle of enemies', () => {
-		const tileSizeInPixels = 50
+		const tileSize = 50
 		const sufficientGridSizeToDemonstratePattern = 10
 		state.selectedHoundstoothEffects = [ gongramEffect ]
 		const houndstoothOverrides = {
 			basePattern: {
 				tileSettings: {
-					tileSizeSetting: tileSizeInPixels,
+					tileSizeSetting: tileSize,
 				},
 				viewSettings: {
-					canvasSize: sufficientGridSizeToDemonstratePattern * tileSizeInPixels,
+					canvasSize: sufficientGridSizeToDemonstratePattern * tileSize,
 				},
 				gridSettings: {
 					gridSize: sufficientGridSizeToDemonstratePattern,
@@ -30,160 +30,160 @@ describe('gongram coloration', () => {
 		const rowOneTiles = [
 			{
 				baseId: 0,
-				originInPixels: [ 0 * tileSizeInPixels, 0 * tileSizeInPixels ],
-				tileSizeInPixels,
+				tileOrigin: [ 0 * tileSize, 0 * tileSize ],
+				tileSize,
 				colors: [ BLACK, BLACK ],
 			},
 			{
 				baseId: 0,
-				originInPixels: [ 1 * tileSizeInPixels, 0 * tileSizeInPixels ],
-				tileSizeInPixels,
+				tileOrigin: [ 1 * tileSize, 0 * tileSize ],
+				tileSize,
 				colors: [ BLACK, BLUE ],
 			},
 			{
 				baseId: 0,
-				originInPixels: [ 2 * tileSizeInPixels, 0 * tileSizeInPixels ],
-				tileSizeInPixels,
+				tileOrigin: [ 2 * tileSize, 0 * tileSize ],
+				tileSize,
 				colors: [ BLACK, WHITE ],
 			},
 			{
 				baseId: 0,
-				originInPixels: [ 3 * tileSizeInPixels, 0 * tileSizeInPixels ],
-				tileSizeInPixels,
+				tileOrigin: [ 3 * tileSize, 0 * tileSize ],
+				tileSize,
 				colors: [ BLACK, GREEN ],
 			},
 			{
 				baseId: 0,
-				originInPixels: [ 4 * tileSizeInPixels, 0 * tileSizeInPixels ],
-				tileSizeInPixels,
+				tileOrigin: [ 4 * tileSize, 0 * tileSize ],
+				tileSize,
 				colors: [ BLACK, RED ],
 			},
 		]
 		const rowTwoTiles = [
 			{
 				baseId: 0,
-				originInPixels: [ 0 * tileSizeInPixels, 1 * tileSizeInPixels ],
-				tileSizeInPixels,
+				tileOrigin: [ 0 * tileSize, 1 * tileSize ],
+				tileSize,
 				colors: [ WHITE, BLACK ],
 			},
 			{
 				baseId: 0,
-				originInPixels: [ 1 * tileSizeInPixels, 1 * tileSizeInPixels ],
-				tileSizeInPixels,
+				tileOrigin: [ 1 * tileSize, 1 * tileSize ],
+				tileSize,
 				colors: [ WHITE, BLUE ],
 			},
 			{
 				baseId: 0,
-				originInPixels: [ 2 * tileSizeInPixels, 1 * tileSizeInPixels ],
-				tileSizeInPixels,
+				tileOrigin: [ 2 * tileSize, 1 * tileSize ],
+				tileSize,
 				colors: [ WHITE, WHITE ],
 			},
 			{
 				baseId: 0,
-				originInPixels: [ 3 * tileSizeInPixels, 1 * tileSizeInPixels ],
-				tileSizeInPixels,
+				tileOrigin: [ 3 * tileSize, 1 * tileSize ],
+				tileSize,
 				colors: [ WHITE, GREEN ],
 			},
 			{
 				baseId: 0,
-				originInPixels: [ 4 * tileSizeInPixels, 1 * tileSizeInPixels ],
-				tileSizeInPixels,
+				tileOrigin: [ 4 * tileSize, 1 * tileSize ],
+				tileSize,
 				colors: [ WHITE, RED ],
 			},
 		]
 		const rowThreeTiles = [
 			{
 				baseId: 0,
-				originInPixels: [ 0 * tileSizeInPixels, 2 * tileSizeInPixels ],
-				tileSizeInPixels,
+				tileOrigin: [ 0 * tileSize, 2 * tileSize ],
+				tileSize,
 				colors: [ RED, BLACK ],
 			},
 			{
 				baseId: 0,
-				originInPixels: [ 1 * tileSizeInPixels, 2 * tileSizeInPixels ],
-				tileSizeInPixels,
+				tileOrigin: [ 1 * tileSize, 2 * tileSize ],
+				tileSize,
 				colors: [ RED, BLUE ],
 			},
 			{
 				baseId: 0,
-				originInPixels: [ 2 * tileSizeInPixels, 2 * tileSizeInPixels ],
-				tileSizeInPixels,
+				tileOrigin: [ 2 * tileSize, 2 * tileSize ],
+				tileSize,
 				colors: [ RED, WHITE ],
 			},
 			{
 				baseId: 0,
-				originInPixels: [ 3 * tileSizeInPixels, 2 * tileSizeInPixels ],
-				tileSizeInPixels,
+				tileOrigin: [ 3 * tileSize, 2 * tileSize ],
+				tileSize,
 				colors: [ RED, GREEN ],
 			},
 			{
 				baseId: 0,
-				originInPixels: [ 4 * tileSizeInPixels, 2 * tileSizeInPixels ],
-				tileSizeInPixels,
+				tileOrigin: [ 4 * tileSize, 2 * tileSize ],
+				tileSize,
 				colors: [ RED, RED ],
 			},
 		]
 		const rowFourTiles = [
 			{
 				baseId: 0,
-				originInPixels: [ 0 * tileSizeInPixels, 3 * tileSizeInPixels ],
-				tileSizeInPixels,
+				tileOrigin: [ 0 * tileSize, 3 * tileSize ],
+				tileSize,
 				colors: [ BLUE, BLACK ],
 			},
 			{
 				baseId: 0,
-				originInPixels: [ 1 * tileSizeInPixels, 3 * tileSizeInPixels ],
-				tileSizeInPixels,
+				tileOrigin: [ 1 * tileSize, 3 * tileSize ],
+				tileSize,
 				colors: [ BLUE, BLUE ],
 			},
 			{
 				baseId: 0,
-				originInPixels: [ 2 * tileSizeInPixels, 3 * tileSizeInPixels ],
-				tileSizeInPixels,
+				tileOrigin: [ 2 * tileSize, 3 * tileSize ],
+				tileSize,
 				colors: [ BLUE, WHITE ],
 			},
 			{
 				baseId: 0,
-				originInPixels: [ 3 * tileSizeInPixels, 3 * tileSizeInPixels ],
-				tileSizeInPixels,
+				tileOrigin: [ 3 * tileSize, 3 * tileSize ],
+				tileSize,
 				colors: [ BLUE, GREEN ],
 			},
 			{
 				baseId: 0,
-				originInPixels: [ 4 * tileSizeInPixels, 3 * tileSizeInPixels ],
-				tileSizeInPixels,
+				tileOrigin: [ 4 * tileSize, 3 * tileSize ],
+				tileSize,
 				colors: [ BLUE, RED ],
 			},
 		]
 		const rowFiveTiles = [
 			{
 				baseId: 0,
-				originInPixels: [ 0 * tileSizeInPixels, 4 * tileSizeInPixels ],
-				tileSizeInPixels,
+				tileOrigin: [ 0 * tileSize, 4 * tileSize ],
+				tileSize,
 				colors: [ GREEN, BLACK ],
 			},
 			{
 				baseId: 0,
-				originInPixels: [ 1 * tileSizeInPixels, 4 * tileSizeInPixels ],
-				tileSizeInPixels,
+				tileOrigin: [ 1 * tileSize, 4 * tileSize ],
+				tileSize,
 				colors: [ GREEN, BLUE ],
 			},
 			{
 				baseId: 0,
-				originInPixels: [ 2 * tileSizeInPixels, 4 * tileSizeInPixels ],
-				tileSizeInPixels,
+				tileOrigin: [ 2 * tileSize, 4 * tileSize ],
+				tileSize,
 				colors: [ GREEN, WHITE ],
 			},
 			{
 				baseId: 0,
-				originInPixels: [ 3 * tileSizeInPixels, 4 * tileSizeInPixels ],
-				tileSizeInPixels,
+				tileOrigin: [ 3 * tileSize, 4 * tileSize ],
+				tileSize,
 				colors: [ GREEN, GREEN ],
 			},
 			{
 				baseId: 0,
-				originInPixels: [ 4 * tileSizeInPixels, 4 * tileSizeInPixels ],
-				tileSizeInPixels,
+				tileOrigin: [ 4 * tileSize, 4 * tileSize ],
+				tileSize,
 				colors: [ GREEN, RED ],
 			},
 		]
