@@ -1,9 +1,9 @@
-import { constants } from '../../../src'
+import { constants, Houndstooth } from '../../../src'
 import { gongramSupertile, gongramWeave } from '../src'
 
 const { BLACK, BLUE, GREEN, RED, WHITE } = constants
 
-const gongramEffect = {
+const gongramEffect: Houndstooth = {
 	name: 'gongram',
 	basePattern: {
 		colorSettings: {
