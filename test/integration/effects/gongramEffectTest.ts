@@ -4,6 +4,7 @@ import activateTestMarkerCanvas from '../../../../../test/integration/helpers/ac
 import { BLACK, BLUE, WHITE, GREEN, RED } from '../../../../../src/constants'
 import state from '../../../../../src/state'
 import gongramEffect from '../../../effects/gongramEffect'
+import CanvasSize from '../../../../../src/canvas/types/CanvasSize'
 
 describe('gongram coloration', () => {
 	it('arranges the 5 MTG colors by rows in the cycle of allies, and by columns in the cycle of enemies', () => {
@@ -16,7 +17,7 @@ describe('gongram coloration', () => {
 					tileSizeSetting: tileSize,
 				},
 				viewSettings: {
-					canvasSize: sufficientGridSizeToDemonstratePattern * tileSize,
+					canvasSize: sufficientGridSizeToDemonstratePattern * tileSize as CanvasSize,
 				},
 				gridSettings: {
 					gridSize: sufficientGridSizeToDemonstratePattern,
