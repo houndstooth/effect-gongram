@@ -5,6 +5,7 @@ import { BLACK, BLUE, WHITE, GREEN, RED } from '../../../../../src/constants'
 import state from '../../../../../src/state'
 import gongramEffect from '../../../effects/gongramEffect'
 import CanvasSize from '../../../../../src/canvas/types/CanvasSize'
+import Coordinate from '../../../../../src/space/types/Coordinate'
 
 describe('gongram coloration', () => {
 	it('arranges the 5 MTG colors by rows in the cycle of allies, and by columns in the cycle of enemies', () => {
@@ -31,31 +32,31 @@ describe('gongram coloration', () => {
 		const rowOneTiles = [
 			{
 				baseId: 0,
-				tileOrigin: [ 0 * tileSize, 0 * tileSize ],
+				tileOrigin: [ 0 * tileSize, 0 * tileSize ] as Coordinate,
 				tileSize,
 				colors: [ BLACK, BLACK ],
 			},
 			{
 				baseId: 0,
-				tileOrigin: [ 1 * tileSize, 0 * tileSize ],
+				tileOrigin: [ 1 * tileSize, 0 * tileSize ] as Coordinate,
 				tileSize,
 				colors: [ BLACK, BLUE ],
 			},
 			{
 				baseId: 0,
-				tileOrigin: [ 2 * tileSize, 0 * tileSize ],
+				tileOrigin: [ 2 * tileSize, 0 * tileSize ] as Coordinate,
 				tileSize,
 				colors: [ BLACK, WHITE ],
 			},
 			{
 				baseId: 0,
-				tileOrigin: [ 3 * tileSize, 0 * tileSize ],
+				tileOrigin: [ 3 * tileSize, 0 * tileSize ] as Coordinate,
 				tileSize,
 				colors: [ BLACK, GREEN ],
 			},
 			{
 				baseId: 0,
-				tileOrigin: [ 4 * tileSize, 0 * tileSize ],
+				tileOrigin: [ 4 * tileSize, 0 * tileSize ] as Coordinate,
 				tileSize,
 				colors: [ BLACK, RED ],
 			},
@@ -63,31 +64,31 @@ describe('gongram coloration', () => {
 		const rowTwoTiles = [
 			{
 				baseId: 0,
-				tileOrigin: [ 0 * tileSize, 1 * tileSize ],
+				tileOrigin: [ 0 * tileSize, 1 * tileSize ] as Coordinate,
 				tileSize,
 				colors: [ WHITE, BLACK ],
 			},
 			{
 				baseId: 0,
-				tileOrigin: [ 1 * tileSize, 1 * tileSize ],
+				tileOrigin: [ 1 * tileSize, 1 * tileSize ] as Coordinate,
 				tileSize,
 				colors: [ WHITE, BLUE ],
 			},
 			{
 				baseId: 0,
-				tileOrigin: [ 2 * tileSize, 1 * tileSize ],
+				tileOrigin: [ 2 * tileSize, 1 * tileSize ] as Coordinate,
 				tileSize,
 				colors: [ WHITE, WHITE ],
 			},
 			{
 				baseId: 0,
-				tileOrigin: [ 3 * tileSize, 1 * tileSize ],
+				tileOrigin: [ 3 * tileSize, 1 * tileSize ] as Coordinate,
 				tileSize,
 				colors: [ WHITE, GREEN ],
 			},
 			{
 				baseId: 0,
-				tileOrigin: [ 4 * tileSize, 1 * tileSize ],
+				tileOrigin: [ 4 * tileSize, 1 * tileSize ] as Coordinate,
 				tileSize,
 				colors: [ WHITE, RED ],
 			},
@@ -95,31 +96,31 @@ describe('gongram coloration', () => {
 		const rowThreeTiles = [
 			{
 				baseId: 0,
-				tileOrigin: [ 0 * tileSize, 2 * tileSize ],
+				tileOrigin: [ 0 * tileSize, 2 * tileSize ] as Coordinate,
 				tileSize,
 				colors: [ RED, BLACK ],
 			},
 			{
 				baseId: 0,
-				tileOrigin: [ 1 * tileSize, 2 * tileSize ],
+				tileOrigin: [ 1 * tileSize, 2 * tileSize ] as Coordinate,
 				tileSize,
 				colors: [ RED, BLUE ],
 			},
 			{
 				baseId: 0,
-				tileOrigin: [ 2 * tileSize, 2 * tileSize ],
+				tileOrigin: [ 2 * tileSize, 2 * tileSize ] as Coordinate,
 				tileSize,
 				colors: [ RED, WHITE ],
 			},
 			{
 				baseId: 0,
-				tileOrigin: [ 3 * tileSize, 2 * tileSize ],
+				tileOrigin: [ 3 * tileSize, 2 * tileSize ] as Coordinate,
 				tileSize,
 				colors: [ RED, GREEN ],
 			},
 			{
 				baseId: 0,
-				tileOrigin: [ 4 * tileSize, 2 * tileSize ],
+				tileOrigin: [ 4 * tileSize, 2 * tileSize ] as Coordinate,
 				tileSize,
 				colors: [ RED, RED ],
 			},
@@ -127,31 +128,31 @@ describe('gongram coloration', () => {
 		const rowFourTiles = [
 			{
 				baseId: 0,
-				tileOrigin: [ 0 * tileSize, 3 * tileSize ],
+				tileOrigin: [ 0 * tileSize, 3 * tileSize ] as Coordinate,
 				tileSize,
 				colors: [ BLUE, BLACK ],
 			},
 			{
 				baseId: 0,
-				tileOrigin: [ 1 * tileSize, 3 * tileSize ],
+				tileOrigin: [ 1 * tileSize, 3 * tileSize ] as Coordinate,
 				tileSize,
 				colors: [ BLUE, BLUE ],
 			},
 			{
 				baseId: 0,
-				tileOrigin: [ 2 * tileSize, 3 * tileSize ],
+				tileOrigin: [ 2 * tileSize, 3 * tileSize ] as Coordinate,
 				tileSize,
 				colors: [ BLUE, WHITE ],
 			},
 			{
 				baseId: 0,
-				tileOrigin: [ 3 * tileSize, 3 * tileSize ],
+				tileOrigin: [ 3 * tileSize, 3 * tileSize ] as Coordinate,
 				tileSize,
 				colors: [ BLUE, GREEN ],
 			},
 			{
 				baseId: 0,
-				tileOrigin: [ 4 * tileSize, 3 * tileSize ],
+				tileOrigin: [ 4 * tileSize, 3 * tileSize ] as Coordinate,
 				tileSize,
 				colors: [ BLUE, RED ],
 			},
@@ -159,31 +160,31 @@ describe('gongram coloration', () => {
 		const rowFiveTiles = [
 			{
 				baseId: 0,
-				tileOrigin: [ 0 * tileSize, 4 * tileSize ],
+				tileOrigin: [ 0 * tileSize, 4 * tileSize ] as Coordinate,
 				tileSize,
 				colors: [ GREEN, BLACK ],
 			},
 			{
 				baseId: 0,
-				tileOrigin: [ 1 * tileSize, 4 * tileSize ],
+				tileOrigin: [ 1 * tileSize, 4 * tileSize ] as Coordinate,
 				tileSize,
 				colors: [ GREEN, BLUE ],
 			},
 			{
 				baseId: 0,
-				tileOrigin: [ 2 * tileSize, 4 * tileSize ],
+				tileOrigin: [ 2 * tileSize, 4 * tileSize ] as Coordinate,
 				tileSize,
 				colors: [ GREEN, WHITE ],
 			},
 			{
 				baseId: 0,
-				tileOrigin: [ 3 * tileSize, 4 * tileSize ],
+				tileOrigin: [ 3 * tileSize, 4 * tileSize ] as Coordinate,
 				tileSize,
 				colors: [ GREEN, GREEN ],
 			},
 			{
 				baseId: 0,
-				tileOrigin: [ 4 * tileSize, 4 * tileSize ],
+				tileOrigin: [ 4 * tileSize, 4 * tileSize ] as Coordinate,
 				tileSize,
 				colors: [ GREEN, RED ],
 			},
