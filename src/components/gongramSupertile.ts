@@ -6,7 +6,7 @@ const gongramSupertile: { (): Supertile } = () => {
 		return iterator(5).map(y => {
 			return [ y * 2 % 5, x ]
 		})
-	})
+	}) as Supertile
 }
 
 export default gongramSupertile
