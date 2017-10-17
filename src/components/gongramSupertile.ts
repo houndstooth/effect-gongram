@@ -1,5 +1,5 @@
-import { iterator } from '../../../../src/utilities/codeUtilities'
 import { Supertile } from '../../../../src'
+import { iterator } from '../../../../src/utilities/codeUtilities'
 
 const gongramSupertile: { (): Supertile } = () =>
 	iterator(5).map(x =>

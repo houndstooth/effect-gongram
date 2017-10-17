@@ -1,11 +1,11 @@
-import executeSelectedHoundstoothEffects from '../../../../../src/execute/executeSelectedHoundstoothEffects'
-import standardTileIsColors from '../../../../../test/integration/helpers/standardTileIsColors'
-import activateTestMarkerCanvas from '../../../../../test/integration/helpers/activateTestMarkerCanvas'
-import { BLACK, BLUE, WHITE, GREEN, RED } from '../../../../../src/constants'
-import state from '../../../../../src/state'
-import gongramEffect from '../../../effects/gongramEffect'
 import CanvasSize from '../../../../../src/canvas/types/CanvasSize'
+import { BLACK, BLUE, GREEN, RED, WHITE } from '../../../../../src/constants'
+import executeSelectedHoundstoothEffects from '../../../../../src/execute/executeSelectedHoundstoothEffects'
 import Coordinate from '../../../../../src/space/types/Coordinate'
+import state from '../../../../../src/state'
+import activateTestMarkerCanvas from '../../../../../test/integration/helpers/activateTestMarkerCanvas'
+import standardTileIsColors from '../../../../../test/integration/helpers/standardTileIsColors'
+import gongramEffect from '../../../effects/gongramEffect'
 
 describe('gongram coloration', () => {
 	it('arranges the 5 MTG colors by rows in the cycle of allies, and by columns in the cycle of enemies', () => {
