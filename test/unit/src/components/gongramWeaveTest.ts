@@ -5,8 +5,8 @@ describe('gongram weave', () => {
 		const actualWeave = gongramWeave()
 
 		const expectedWeave = {
-			rows: [ 0, 2, 4, 1, 3 ],
 			columns: [ 0, 1, 2, 3, 4 ],
+			rows: [ 0, 2, 4, 1, 3 ],
 		}
 
 		expect(actualWeave).toEqual(expectedWeave)

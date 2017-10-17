@@ -14,14 +14,14 @@ describe('gongram coloration', () => {
 		state.selectedHoundstoothEffects = [ gongramEffect ]
 		const houndstoothOverrides = {
 			basePattern: {
+				gridSettings: {
+					gridSize: sufficientGridSizeToDemonstratePattern,
+				},
 				tileSettings: {
 					tileSizeSetting: tileSize,
 				},
 				viewSettings: {
 					canvasSize: sufficientGridSizeToDemonstratePattern * tileSize as CanvasSize,
-				},
-				gridSettings: {
-					gridSize: sufficientGridSizeToDemonstratePattern,
 				},
 			},
 		}
@@ -32,161 +32,161 @@ describe('gongram coloration', () => {
 		const rowOneTiles = [
 			{
 				baseId: 0,
+				colors: [ BLACK, BLACK ],
 				tileOrigin: [ 0 * tileSize as any, 0 * tileSize as any ] as Coordinate,
 				tileSize,
-				colors: [ BLACK, BLACK ],
 			},
 			{
 				baseId: 0,
+				colors: [ BLACK, BLUE ],
 				tileOrigin: [ 1 * tileSize as any, 0 * tileSize as any ] as Coordinate,
 				tileSize,
-				colors: [ BLACK, BLUE ],
 			},
 			{
 				baseId: 0,
+				colors: [ BLACK, WHITE ],
 				tileOrigin: [ 2 * tileSize as any, 0 * tileSize as any ] as Coordinate,
 				tileSize,
-				colors: [ BLACK, WHITE ],
 			},
 			{
 				baseId: 0,
+				colors: [ BLACK, GREEN ],
 				tileOrigin: [ 3 * tileSize as any, 0 * tileSize as any ] as Coordinate,
 				tileSize,
-				colors: [ BLACK, GREEN ],
 			},
 			{
 				baseId: 0,
+				colors: [ BLACK, RED ],
 				tileOrigin: [ 4 * tileSize as any, 0 * tileSize as any ] as Coordinate,
 				tileSize,
-				colors: [ BLACK, RED ],
 			},
 		]
 		const rowTwoTiles = [
 			{
 				baseId: 0,
+				colors: [ WHITE, BLACK ],
 				tileOrigin: [ 0 * tileSize as any, 1 * tileSize as any ] as Coordinate,
 				tileSize,
-				colors: [ WHITE, BLACK ],
 			},
 			{
 				baseId: 0,
+				colors: [ WHITE, BLUE ],
 				tileOrigin: [ 1 * tileSize as any, 1 * tileSize as any ] as Coordinate,
 				tileSize,
-				colors: [ WHITE, BLUE ],
 			},
 			{
 				baseId: 0,
+				colors: [ WHITE, WHITE ],
 				tileOrigin: [ 2 * tileSize as any, 1 * tileSize as any ] as Coordinate,
 				tileSize,
-				colors: [ WHITE, WHITE ],
 			},
 			{
 				baseId: 0,
+				colors: [ WHITE, GREEN ],
 				tileOrigin: [ 3 * tileSize as any, 1 * tileSize as any ] as Coordinate,
 				tileSize,
-				colors: [ WHITE, GREEN ],
 			},
 			{
 				baseId: 0,
+				colors: [ WHITE, RED ],
 				tileOrigin: [ 4 * tileSize as any, 1 * tileSize as any ] as Coordinate,
 				tileSize,
-				colors: [ WHITE, RED ],
 			},
 		]
 		const rowThreeTiles = [
 			{
 				baseId: 0,
+				colors: [ RED, BLACK ],
 				tileOrigin: [ 0 * tileSize as any, 2 * tileSize as any ] as Coordinate,
 				tileSize,
-				colors: [ RED, BLACK ],
 			},
 			{
 				baseId: 0,
+				colors: [ RED, BLUE ],
 				tileOrigin: [ 1 * tileSize as any, 2 * tileSize as any ] as Coordinate,
 				tileSize,
-				colors: [ RED, BLUE ],
 			},
 			{
 				baseId: 0,
+				colors: [ RED, WHITE ],
 				tileOrigin: [ 2 * tileSize as any, 2 * tileSize as any ] as Coordinate,
 				tileSize,
-				colors: [ RED, WHITE ],
 			},
 			{
 				baseId: 0,
+				colors: [ RED, GREEN ],
 				tileOrigin: [ 3 * tileSize as any, 2 * tileSize as any ] as Coordinate,
 				tileSize,
-				colors: [ RED, GREEN ],
 			},
 			{
 				baseId: 0,
+				colors: [ RED, RED ],
 				tileOrigin: [ 4 * tileSize as any, 2 * tileSize as any ] as Coordinate,
 				tileSize,
-				colors: [ RED, RED ],
 			},
 		]
 		const rowFourTiles = [
 			{
 				baseId: 0,
+				colors: [ BLUE, BLACK ],
 				tileOrigin: [ 0 * tileSize as any, 3 * tileSize as any ] as Coordinate,
 				tileSize,
-				colors: [ BLUE, BLACK ],
 			},
 			{
 				baseId: 0,
+				colors: [ BLUE, BLUE ],
 				tileOrigin: [ 1 * tileSize as any, 3 * tileSize as any ] as Coordinate,
 				tileSize,
-				colors: [ BLUE, BLUE ],
 			},
 			{
 				baseId: 0,
+				colors: [ BLUE, WHITE ],
 				tileOrigin: [ 2 * tileSize as any, 3 * tileSize as any ] as Coordinate,
 				tileSize,
-				colors: [ BLUE, WHITE ],
 			},
 			{
 				baseId: 0,
+				colors: [ BLUE, GREEN ],
 				tileOrigin: [ 3 * tileSize as any, 3 * tileSize as any ] as Coordinate,
 				tileSize,
-				colors: [ BLUE, GREEN ],
 			},
 			{
 				baseId: 0,
+				colors: [ BLUE, RED ],
 				tileOrigin: [ 4 * tileSize as any, 3 * tileSize as any ] as Coordinate,
 				tileSize,
-				colors: [ BLUE, RED ],
 			},
 		]
 		const rowFiveTiles = [
 			{
 				baseId: 0,
+				colors: [ GREEN, BLACK ],
 				tileOrigin: [ 0 * tileSize as any, 4 * tileSize as any ] as Coordinate,
 				tileSize,
-				colors: [ GREEN, BLACK ],
 			},
 			{
 				baseId: 0,
+				colors: [ GREEN, BLUE ],
 				tileOrigin: [ 1 * tileSize as any, 4 * tileSize as any ] as Coordinate,
 				tileSize,
-				colors: [ GREEN, BLUE ],
 			},
 			{
 				baseId: 0,
+				colors: [ GREEN, WHITE ],
 				tileOrigin: [ 2 * tileSize as any, 4 * tileSize as any ] as Coordinate,
 				tileSize,
-				colors: [ GREEN, WHITE ],
 			},
 			{
 				baseId: 0,
+				colors: [ GREEN, GREEN ],
 				tileOrigin: [ 3 * tileSize as any, 4 * tileSize as any ] as Coordinate,
 				tileSize,
-				colors: [ GREEN, GREEN ],
 			},
 			{
 				baseId: 0,
+				colors: [ GREEN, RED ],
 				tileOrigin: [ 4 * tileSize as any, 4 * tileSize as any ] as Coordinate,
 				tileSize,
-				colors: [ GREEN, RED ],
 			},
 		]
 		const tiles = rowOneTiles.concat(rowTwoTiles).concat(rowThreeTiles).concat(rowFourTiles).concat(rowFiveTiles)

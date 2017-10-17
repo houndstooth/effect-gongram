@@ -4,16 +4,16 @@ import { gongramSupertile, gongramWeave } from '../src'
 const { BLACK, BLUE, GREEN, RED, WHITE } = constants
 
 const gongramEffect: Houndstooth = {
-	name: 'gongram',
 	basePattern: {
 		colorSettings: {
-			colorSet: [ BLACK, BLUE, WHITE, GREEN, RED ],
 			assignment: {
 				supertile: gongramSupertile(),
 				weave: gongramWeave(),
 			},
+			colorSet: [ BLACK, BLUE, WHITE, GREEN, RED ],
 		},
 	},
+	name: 'gongram',
 }
 
 export default gongramEffect
