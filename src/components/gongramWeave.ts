@@ -1,9 +1,10 @@
 import { Weave } from '../../../../src'
 import { iterator } from '../../../../src/utilities/codeUtilities'
+import { COPRIME_OFFSET, GONGRAM_COLOR_COUNT } from '../../constants'
 
 const gongramWeave: () => Weave = () => ({
-	columns: iterator(5),
-	rows: iterator(5).map(y => y * 2 % 5),
+	columns: iterator(GONGRAM_COLOR_COUNT),
+	rows: iterator(GONGRAM_COLOR_COUNT).map(y => y * COPRIME_OFFSET % GONGRAM_COLOR_COUNT),
 })
 
 export default gongramWeave
