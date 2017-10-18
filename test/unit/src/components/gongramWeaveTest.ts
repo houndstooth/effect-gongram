@@ -1,4 +1,4 @@
-import gongramWeave from '../../../../src/components/gongramWeave'
+import { gongramWeave } from '../../../../src/components/gongramWeave'
 
 describe('gongram weave', () => {
 	it('rows go by 2s and columns by 1s', () => {

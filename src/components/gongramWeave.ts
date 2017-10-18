@@ -7,4 +7,4 @@ const gongramWeave: () => Weave = () => ({
 	rows: iterator(GONGRAM_COLOR_COUNT).map(y => y * COPRIME_OFFSET % GONGRAM_COLOR_COUNT),
 })
 
-export default gongramWeave
+export { gongramWeave }

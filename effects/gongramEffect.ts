@@ -15,4 +15,4 @@ const gongramEffect: Houndstooth = {
 	name: 'gongram',
 }
 
-export default gongramEffect
+export { gongramEffect }
