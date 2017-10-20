@@ -1,8 +1,8 @@
-import { Houndstooth } from '../../../src'
+import { Effect } from '../../../src'
 import { GONGRAM_COLOR_SET } from '../constants'
 import { gongramSupertile, gongramWeave } from '../src'
 
-const gongramEffect: Houndstooth = {
+const gongramEffect: Effect = {
 	basePattern: {
 		colorSettings: {
 			assignment: {
