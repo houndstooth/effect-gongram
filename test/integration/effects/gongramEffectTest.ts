@@ -1,14 +1,13 @@
+import { from, state, to } from '../../../../../src'
 import { BLACK, BLUE, GREEN, RED, WHITE } from '../../../../../src/constants'
 import { executeSelectedHoundstoothEffects } from '../../../../../src/execute/executeSelectedHoundstoothEffects'
-import { Coordinate } from '../../../../../src/space/types/Coordinate'
-import { state } from '../../../../../src/state'
 import { activateTestMarkerCanvas } from '../../../../../test/integration/helpers/activateTestMarkerCanvas'
 import { standardTileIsColors } from '../../../../../test/integration/helpers/standardTileIsColors'
 import { gongramEffect } from '../../../effects/gongramEffect'
 
 describe('gongram coloration', () => {
 	it('arranges the 5 MTG colors by rows in the cycle of allies, and by columns in the cycle of enemies', () => {
-		const tileSize = 50 as any
+		const tileSize = to.Units(50)
 		const sufficientGridSizeToDemonstratePattern = 10
 		state.selectedHoundstoothEffects = [ gongramEffect ]
 		const houndstoothOverrides = {
@@ -20,7 +19,7 @@ describe('gongram coloration', () => {
 					tileSizeSetting: tileSize,
 				},
 				viewSettings: {
-					canvasSize: sufficientGridSizeToDemonstratePattern * tileSize as any,
+					canvasSize: to.Dimension(sufficientGridSizeToDemonstratePattern * from.Units(tileSize)),
 				},
 			},
 		}
@@ -33,31 +32,31 @@ describe('gongram coloration', () => {
 			{
 				baseId: baseId += 8,
 				colors: [ BLACK, BLACK ],
-				tileOrigin: [ tileSize * 0 as any, tileSize * 0 as any ] as Coordinate,
+				tileOrigin: to.Coordinate([ from.Units(tileSize) * 0, from.Units(tileSize) * 0 ]),
 				tileSize,
 			},
 			{
 				baseId: baseId += 8,
 				colors: [ BLACK, BLUE ],
-				tileOrigin: [ tileSize * 1 as any, tileSize * 0 as any ] as Coordinate,
+				tileOrigin: to.Coordinate([ from.Units(tileSize) * 1, from.Units(tileSize) * 0 ]),
 				tileSize,
 			},
 			{
 				baseId: baseId += 8,
 				colors: [ BLACK, WHITE ],
-				tileOrigin: [ tileSize * 2 as any, tileSize * 0 as any ] as Coordinate,
+				tileOrigin: to.Coordinate([ from.Units(tileSize) * 2, from.Units(tileSize) * 0 ]),
 				tileSize,
 			},
 			{
 				baseId: baseId += 8,
 				colors: [ BLACK, GREEN ],
-				tileOrigin: [ tileSize * 3 as any, tileSize * 0 as any ] as Coordinate,
+				tileOrigin: to.Coordinate([ from.Units(tileSize) * 3, from.Units(tileSize) * 0 ]),
 				tileSize,
 			},
 			{
 				baseId: baseId += 8,
 				colors: [ BLACK, RED ],
-				tileOrigin: [ tileSize * 4 as any, tileSize * 0 as any ] as Coordinate,
+				tileOrigin: to.Coordinate([ from.Units(tileSize) * 4, from.Units(tileSize) * 0 ]),
 				tileSize,
 			},
 		]
@@ -65,31 +64,31 @@ describe('gongram coloration', () => {
 			{
 				baseId: baseId += 8,
 				colors: [ WHITE, BLACK ],
-				tileOrigin: [ tileSize * 0 as any, tileSize * 1 as any ] as Coordinate,
+				tileOrigin: to.Coordinate([ from.Units(tileSize) * 0, from.Units(tileSize) * 1 ]),
 				tileSize,
 			},
 			{
 				baseId: baseId += 8,
 				colors: [ WHITE, BLUE ],
-				tileOrigin: [ tileSize * 1 as any, tileSize * 1 as any ] as Coordinate,
+				tileOrigin: to.Coordinate([ from.Units(tileSize) * 1, from.Units(tileSize) * 1 ]),
 				tileSize,
 			},
 			{
 				baseId: baseId += 8,
 				colors: [ WHITE, WHITE ],
-				tileOrigin: [ tileSize * 2 as any, tileSize * 1 as any ] as Coordinate,
+				tileOrigin: to.Coordinate([ from.Units(tileSize) * 2, from.Units(tileSize) * 1 ]),
 				tileSize,
 			},
 			{
 				baseId: baseId += 8,
 				colors: [ WHITE, GREEN ],
-				tileOrigin: [ tileSize * 3 as any, tileSize * 1 as any ] as Coordinate,
+				tileOrigin: to.Coordinate([ from.Units(tileSize) * 3, from.Units(tileSize) * 1 ]),
 				tileSize,
 			},
 			{
 				baseId: baseId += 8,
 				colors: [ WHITE, RED ],
-				tileOrigin: [ tileSize * 4 as any, tileSize * 1 as any ] as Coordinate,
+				tileOrigin: to.Coordinate([ from.Units(tileSize) * 4, from.Units(tileSize) * 1 ]),
 				tileSize,
 			},
 		]
@@ -97,31 +96,31 @@ describe('gongram coloration', () => {
 			{
 				baseId: baseId += 8,
 				colors: [ RED, BLACK ],
-				tileOrigin: [ tileSize * 0 as any, tileSize * 2 as any ] as Coordinate,
+				tileOrigin: to.Coordinate([ from.Units(tileSize) * 0, from.Units(tileSize) * 2 ]),
 				tileSize,
 			},
 			{
 				baseId: baseId += 8,
 				colors: [ RED, BLUE ],
-				tileOrigin: [ tileSize * 1 as any, tileSize * 2 as any ] as Coordinate,
+				tileOrigin: to.Coordinate([ from.Units(tileSize) * 1, from.Units(tileSize) * 2 ]),
 				tileSize,
 			},
 			{
 				baseId: baseId += 8,
 				colors: [ RED, WHITE ],
-				tileOrigin: [ tileSize * 2 as any, tileSize * 2 as any ] as Coordinate,
+				tileOrigin: to.Coordinate([ from.Units(tileSize) * 2, from.Units(tileSize) * 2 ]),
 				tileSize,
 			},
 			{
 				baseId: baseId += 8,
 				colors: [ RED, GREEN ],
-				tileOrigin: [ tileSize * 3 as any, tileSize * 2 as any ] as Coordinate,
+				tileOrigin: to.Coordinate([ from.Units(tileSize) * 3, from.Units(tileSize) * 2 ]),
 				tileSize,
 			},
 			{
 				baseId: baseId += 8,
 				colors: [ RED, RED ],
-				tileOrigin: [ tileSize * 4 as any, tileSize * 2 as any ] as Coordinate,
+				tileOrigin: to.Coordinate([ from.Units(tileSize) * 4, from.Units(tileSize) * 2 ]),
 				tileSize,
 			},
 		]
@@ -129,31 +128,31 @@ describe('gongram coloration', () => {
 			{
 				baseId: baseId += 8,
 				colors: [ BLUE, BLACK ],
-				tileOrigin: [ tileSize * 0 as any, tileSize * 3 as any ] as Coordinate,
+				tileOrigin: to.Coordinate([ from.Units(tileSize) * 0, from.Units(tileSize) * 3 ]),
 				tileSize,
 			},
 			{
 				baseId: baseId += 8,
 				colors: [ BLUE, BLUE ],
-				tileOrigin: [ tileSize * 1 as any, tileSize * 3 as any ] as Coordinate,
+				tileOrigin: to.Coordinate([ from.Units(tileSize) * 1, from.Units(tileSize) * 3 ]),
 				tileSize,
 			},
 			{
 				baseId: baseId += 8,
 				colors: [ BLUE, WHITE ],
-				tileOrigin: [ tileSize * 2 as any, tileSize * 3 as any ] as Coordinate,
+				tileOrigin: to.Coordinate([ from.Units(tileSize) * 2, from.Units(tileSize) * 3 ]),
 				tileSize,
 			},
 			{
 				baseId: baseId += 8,
 				colors: [ BLUE, GREEN ],
-				tileOrigin: [ tileSize * 3 as any, tileSize * 3 as any ] as Coordinate,
+				tileOrigin: to.Coordinate([ from.Units(tileSize) * 3, from.Units(tileSize) * 3 ]),
 				tileSize,
 			},
 			{
 				baseId: baseId += 8,
 				colors: [ BLUE, RED ],
-				tileOrigin: [ tileSize * 4 as any, tileSize * 3 as any ] as Coordinate,
+				tileOrigin: to.Coordinate([ from.Units(tileSize) * 4, from.Units(tileSize) * 3 ]),
 				tileSize,
 			},
 		]
@@ -161,31 +160,31 @@ describe('gongram coloration', () => {
 			{
 				baseId: baseId += 8,
 				colors: [ GREEN, BLACK ],
-				tileOrigin: [ tileSize * 0 as any, tileSize * 4 as any ] as Coordinate,
+				tileOrigin: to.Coordinate([ from.Units(tileSize) * 0, from.Units(tileSize) * 4 ]),
 				tileSize,
 			},
 			{
 				baseId: baseId += 8,
 				colors: [ GREEN, BLUE ],
-				tileOrigin: [ tileSize * 1 as any, tileSize * 4 as any ] as Coordinate,
+				tileOrigin: to.Coordinate([ from.Units(tileSize) * 1, from.Units(tileSize) * 4 ]),
 				tileSize,
 			},
 			{
 				baseId: baseId += 8,
 				colors: [ GREEN, WHITE ],
-				tileOrigin: [ tileSize * 2 as any, tileSize * 4 as any ] as Coordinate,
+				tileOrigin: to.Coordinate([ from.Units(tileSize) * 2, from.Units(tileSize) * 4 ]),
 				tileSize,
 			},
 			{
 				baseId: baseId += 8,
 				colors: [ GREEN, GREEN ],
-				tileOrigin: [ tileSize * 3 as any, tileSize * 4 as any ] as Coordinate,
+				tileOrigin: to.Coordinate([ from.Units(tileSize) * 3, from.Units(tileSize) * 4 ]),
 				tileSize,
 			},
 			{
 				baseId: baseId += 8,
 				colors: [ GREEN, RED ],
-				tileOrigin: [ tileSize * 4 as any, tileSize * 4 as any ] as Coordinate,
+				tileOrigin: to.Coordinate([ from.Units(tileSize) * 4, from.Units(tileSize) * 4 ]),
 				tileSize,
 			},
 		]
