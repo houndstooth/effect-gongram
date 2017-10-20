@@ -1,4 +1,3 @@
-import { CanvasSize } from '../../../../../src/canvas/types/CanvasSize'
 import { BLACK, BLUE, GREEN, RED, WHITE } from '../../../../../src/constants'
 import { executeSelectedHoundstoothEffects } from '../../../../../src/execute/executeSelectedHoundstoothEffects'
 import { Coordinate } from '../../../../../src/space/types/Coordinate'
@@ -21,7 +20,7 @@ describe('gongram coloration', () => {
 					tileSizeSetting: tileSize,
 				},
 				viewSettings: {
-					canvasSize: sufficientGridSizeToDemonstratePattern * tileSize as CanvasSize,
+					canvasSize: sufficientGridSizeToDemonstratePattern * tileSize as any,
 				},
 			},
 		}
