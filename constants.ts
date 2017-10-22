@@ -1,8 +1,8 @@
-import { constants } from '../../src'
+import { constants, to } from '../../src'
 
 const { BLACK, BLUE, GREEN, RED, WHITE } = constants
 
-const GONGRAM_COLOR_SET = [ BLACK, BLUE, WHITE, GREEN, RED ]
+const GONGRAM_COLOR_SET = to.ColorSet([ BLACK, BLUE, WHITE, GREEN, RED ])
 
 const GONGRAM_COLOR_COUNT = GONGRAM_COLOR_SET.length
 
