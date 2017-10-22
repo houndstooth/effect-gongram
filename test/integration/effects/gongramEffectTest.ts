@@ -16,7 +16,7 @@ describe('gongram coloration', () => {
 					gridSize: sufficientGridSizeToDemonstratePattern,
 				},
 				tileSettings: {
-					tileSizeSetting: tileSize,
+					tileSize,
 				},
 				viewSettings: {
 					canvasSize: to.Dimension(sufficientGridSizeToDemonstratePattern * from.Unit(tileSize)),
