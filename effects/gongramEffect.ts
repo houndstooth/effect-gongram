@@ -5,7 +5,7 @@ import { gongramSupertile, gongramWeave } from '../src'
 const gongramEffect: Effect = {
 	basePattern: {
 		colorSettings: {
-			assignment: {
+			colorAssignment: {
 				supertile: gongramSupertile(),
 				weave: gongramWeave(),
 			},
