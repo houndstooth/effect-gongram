@@ -19,7 +19,7 @@ describe('gongram coloration', () => {
 					tileSize,
 				},
 				viewSettings: {
-					canvasSize: to.Dimension(sufficientGridSizeToDemonstratePattern * from.Unit(tileSize)),
+					canvasSize: to.Px(sufficientGridSizeToDemonstratePattern * from.Unit(tileSize)),
 				},
 			},
 		}
