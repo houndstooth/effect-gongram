@@ -1,16 +1,19 @@
 import { from, state, to } from '../../../../../src'
+import { Unit } from '../../../../../src/components/types'
 import { BLACK, BLUE, GREEN, RED, WHITE } from '../../../../../src/constants'
 import { executeSelectedHoundstoothEffects } from '../../../../../src/execute/executeSelectedHoundstoothEffects'
+import { Effect } from '../../../../../src/store/types'
 import { activateTestMarkerCanvas } from '../../../../../test/integration/helpers/activateTestMarkerCanvas'
 import { standardTileIsColors } from '../../../../../test/integration/helpers/standardTileIsColors'
+import { StandardTileExpectation } from '../../../../../test/integration/helpers/types'
 import { gongramEffect } from '../../../effects/gongramEffect'
 
 describe('gongram coloration', () => {
 	it('arranges the 5 MTG colors by rows in the cycle of allies, and by columns in the cycle of enemies', () => {
-		const tileSize = to.Unit(50)
-		const sufficientGridSizeToDemonstratePattern = 10
+		const tileSize: Unit = to.Unit(50)
+		const sufficientGridSizeToDemonstratePattern: number = 10
 		state.selectedHoundstoothEffects = [ gongramEffect ]
-		const houndstoothOverrides = {
+		const houndstoothOverrides: Effect = {
 			basePattern: {
 				gridSettings: {
 					gridSize: sufficientGridSizeToDemonstratePattern,
@@ -27,8 +30,8 @@ describe('gongram coloration', () => {
 
 		executeSelectedHoundstoothEffects({ houndstoothOverrides })
 
-		let baseId = -8
-		const rowOneTiles = [
+		let baseId: number = -8
+		const rowOneTiles: StandardTileExpectation[] = [
 			{
 				baseId: baseId += 8,
 				colors: [ BLACK, BLACK ],
@@ -60,7 +63,7 @@ describe('gongram coloration', () => {
 				tileSize,
 			},
 		]
-		const rowTwoTiles = [
+		const rowTwoTiles: StandardTileExpectation[] = [
 			{
 				baseId: baseId += 8,
 				colors: [ WHITE, BLACK ],
@@ -92,7 +95,7 @@ describe('gongram coloration', () => {
 				tileSize,
 			},
 		]
-		const rowThreeTiles = [
+		const rowThreeTiles: StandardTileExpectation[] = [
 			{
 				baseId: baseId += 8,
 				colors: [ RED, BLACK ],
@@ -124,7 +127,7 @@ describe('gongram coloration', () => {
 				tileSize,
 			},
 		]
-		const rowFourTiles = [
+		const rowFourTiles: StandardTileExpectation[] = [
 			{
 				baseId: baseId += 8,
 				colors: [ BLUE, BLACK ],
@@ -156,7 +159,7 @@ describe('gongram coloration', () => {
 				tileSize,
 			},
 		]
-		const rowFiveTiles = [
+		const rowFiveTiles: StandardTileExpectation[] = [
 			{
 				baseId: baseId += 8,
 				colors: [ GREEN, BLACK ],
@@ -188,8 +191,12 @@ describe('gongram coloration', () => {
 				tileSize,
 			},
 		]
-		const tiles = rowOneTiles.concat(rowTwoTiles).concat(rowThreeTiles).concat(rowFourTiles).concat(rowFiveTiles)
+		const tiles: StandardTileExpectation[] = rowOneTiles
+			.concat(rowTwoTiles)
+			.concat(rowThreeTiles)
+			.concat(rowFourTiles)
+			.concat(rowFiveTiles)
 
-		tiles.forEach(tile => expect(standardTileIsColors(tile)).toBe(true))
+		tiles.forEach((tile: StandardTileExpectation) => expect(standardTileIsColors(tile)).toBe(true))
 	})
 })
