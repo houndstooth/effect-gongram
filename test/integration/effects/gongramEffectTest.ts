@@ -9,7 +9,8 @@ import { StandardTileExpectation } from '../../../../../test/integration/helpers
 import { gongramEffect } from '../../../effects/gongramEffect'
 
 describe('gongram coloration', () => {
-	it('arranges the 5 MTG colors by rows in the cycle of allies, and by columns in the cycle of enemies', () => {
+	// tslint:disable-next-line:max-line-length
+	it('arranges the 5 MTG colors by rows in the cycle of allies, and by columns in the cycle of enemies', async (done: DoneFn) => {
 		const tileSize: Unit = to.Unit(50)
 		const sufficientGridSizeToDemonstratePattern: number = 10
 		state.selectedHoundstoothEffects = [ gongramEffect ]
@@ -28,7 +29,7 @@ describe('gongram coloration', () => {
 		}
 		activateTestMarkerCanvas()
 
-		executeSelectedHoundstoothEffects({ houndstoothOverrides })
+		await executeSelectedHoundstoothEffects({ houndstoothOverrides })
 
 		let baseId: number = -8
 		const rowOneTiles: StandardTileExpectation[] = [
@@ -198,5 +199,7 @@ describe('gongram coloration', () => {
 			.concat(rowFiveTiles)
 
 		tiles.forEach((tile: StandardTileExpectation) => expect(standardTileIsColors(tile)).toBe(true))
+
+		done()
 	})
 })
