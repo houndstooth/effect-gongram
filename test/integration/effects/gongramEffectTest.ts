@@ -12,18 +12,18 @@ describe('gongram coloration', () => {
 	// tslint:disable-next-line:max-line-length
 	it('arranges the 5 MTG colors by rows in the cycle of allies, and by columns in the cycle of enemies', async (done: DoneFn) => {
 		const tileSize: Unit = to.Unit(50)
-		const sufficientGridSizeToDemonstratePattern: number = 10
+		const sufficientTileResolutionToDemonstratePattern: number = 10
 		state.selectedHoundstoothEffects = [ gongramEffect ]
 		const houndstoothOverrides: Effect = {
 			basePattern: {
 				gridSettings: {
-					gridSize: sufficientGridSizeToDemonstratePattern,
+					tileResolution: sufficientTileResolutionToDemonstratePattern,
 				},
 				tileSettings: {
 					tileSize,
 				},
 				viewSettings: {
-					canvasSize: to.Px(sufficientGridSizeToDemonstratePattern * from.Unit(tileSize)),
+					canvasSize: to.Px(sufficientTileResolutionToDemonstratePattern * from.Unit(tileSize)),
 				},
 			},
 		}
