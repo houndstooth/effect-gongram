@@ -1,6 +1,6 @@
-import { to } from '../../../../../../src'
-import { Supertile } from '../../../../../../src/components/types'
-import { gongramSupertile } from '../../../../src/components/gongramSupertile'
+import { Supertile } from '../../../../../src/pattern/color/types'
+import * as to from '../../../../../src/to'
+import { gongramSupertile } from '../../../pattern/grid/gongramSupertile'
 
 describe('gongram supertile', () => {
 	it('makes a rank-2 array of addresses for 5 colors, one dimension by 2s and the other by 1s', () => {

@@ -1,5 +1,6 @@
-import { constants, to } from '../../src'
-import { ColorSet } from '../../src/components/types'
+import { constants } from '../../src'
+import { ColorSet } from '../../src/pattern/color/types'
+import * as to from '../../src/to'
 
 const { BLACK, BLUE, GREEN, RED, WHITE } = constants
 

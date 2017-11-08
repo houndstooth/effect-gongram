@@ -1,6 +1,6 @@
 import { Effect } from '../../../src'
 import { GONGRAM_COLOR_SET } from '../constants'
-import { gongramSupertile, gongramWeave } from '../src'
+import { gongramSupertile, gongramWeave } from '../pattern'
 
 const gongramEffect: Effect = {
 	basePattern: {

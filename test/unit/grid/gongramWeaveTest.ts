@@ -1,5 +1,5 @@
-import { Weave } from '../../../../../../src/components/types'
-import { gongramWeave } from '../../../../src/components/gongramWeave'
+import { Weave } from '../../../../../src/pattern/color/types'
+import { gongramWeave } from '../../../pattern/grid/gongramWeave'
 
 describe('gongram weave', () => {
 	it('rows go by 2s and columns by 1s', () => {
