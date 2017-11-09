@@ -1,5 +1,4 @@
-import { codeUtilities, ShapeColorIndex, Supertile } from '../../../../src'
-import * as to from '../../../../src/to'
+import { codeUtilities, ShapeColorIndex, Supertile, to } from '../../../../src'
 import { COPRIME_OFFSET, GONGRAM_COLOR_COUNT } from '../../constants'
 
 const gongramSupertile: () => Supertile =
