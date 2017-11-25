@@ -1,14 +1,8 @@
-import { state } from '../../../../../src'
-import { executeSelectedHoundstoothEffects } from '../../../../../src/app/execute/executeSelectedHoundstoothEffects'
-import { BLACK, BLUE, GREEN, RED, WHITE } from '../../../../../src/constants'
-import * as from from '../../../../../src/from'
-import { Effect } from '../../../../../src/pattern'
-import { Unit } from '../../../../../src/pattern/grid/types'
-import * as to from '../../../../../src/to'
-import { activateTestMarkerCanvas } from '../../../../../test/integration/helpers/activateTestMarkerCanvas'
-import { standardTileIsColors } from '../../../../../test/integration/helpers/standardTileIsColors'
-import { StandardTileExpectation } from '../../../../../test/integration/helpers/types'
-import { gongramEffect } from '../../../effects/gongramEffect'
+import { constants, Effect, executeSelectedHoundstoothEffects, from, state, to, Unit } from '../../../../../src'
+import { activateTestMarkerCanvas, StandardTileExpectation, standardTileIsColors } from '../../../../../test'
+import { gongramEffect } from '../../../effects'
+
+const { BLACK, BLUE, GREEN, RED, WHITE } = constants
 
 describe('gongram coloration', () => {
 	// tslint:disable-next-line:max-line-length
