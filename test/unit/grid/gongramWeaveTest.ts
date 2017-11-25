@@ -1,9 +1,9 @@
-import { Weave } from '../../../../../src/pattern/color/types'
-import { gongramWeave } from '../../../pattern/grid/gongramWeave'
+import { Weave } from '../../../../../src'
+import { gongramWeave } from '../../../pattern'
 
 describe('gongram weave', () => {
 	it('rows go by 2s and columns by 1s', () => {
-		const actualWeave: Weave = gongramWeave()
+		const actualWeave: Weave = gongramWeave.main()
 
 		const expectedWeave: Weave = {
 			columns: [ 0, 1, 2, 3, 4 ],

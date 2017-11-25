@@ -1,6 +1,1 @@
-import { gongramSupertile, gongramWeave } from './grid'
-
-export {
-	gongramSupertile,
-	gongramWeave,
-}
+export { gongramSupertile, gongramWeave } from './grid'

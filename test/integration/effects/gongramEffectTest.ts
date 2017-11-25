@@ -25,7 +25,7 @@ describe('gongram coloration', () => {
 		}
 		activateTestMarkerCanvas()
 
-		executeSelectedHoundstoothEffects({ houndstoothOverrides })
+		executeSelectedHoundstoothEffects.main({ houndstoothOverrides })
 
 		setTimeout(() => {
 			let baseId: number = -8

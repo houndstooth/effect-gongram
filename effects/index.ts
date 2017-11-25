@@ -1,3 +1,1 @@
-import { gongramEffect } from './gongramEffect'
-
-export { gongramEffect }
+export { gongramEffect } from './gongramEffect'

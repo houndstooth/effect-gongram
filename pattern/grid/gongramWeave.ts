@@ -8,4 +8,4 @@ const gongramWeave: () => Weave =
 			y * COPRIME_OFFSET % GONGRAM_COLOR_COUNT),
 	})
 
-export { gongramWeave }
+export { gongramWeave as main }
