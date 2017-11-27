@@ -6,8 +6,8 @@ const gongramEffect: Effect = {
 	basePattern: {
 		colorSettings: {
 			colorAssignmentSettings: {
-				supertile: gongramSupertile.main(),
-				weave: gongramWeave.main(),
+				supertile: gongramSupertile.default(),
+				weave: gongramWeave.default(),
 			},
 			colorSet: GONGRAM_COLOR_SET,
 		},

@@ -6,4 +6,4 @@ const gongramSupertile: () => Supertile =
 		codeUtilities.iterator(GONGRAM_COLOR_COUNT).map((y: number): ShapeColorIndex[] =>
 			to.ShapeColorIndices([ y * COPRIME_OFFSET % GONGRAM_COLOR_COUNT, x ]))))
 
-export { gongramSupertile as main }
+export default gongramSupertile

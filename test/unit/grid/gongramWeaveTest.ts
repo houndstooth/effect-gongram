@@ -3,7 +3,7 @@ import { gongramWeave } from '../../../pattern'
 
 describe('gongram weave', () => {
 	it('rows go by 2s and columns by 1s', () => {
-		const actualWeave: Weave = gongramWeave.main()
+		const actualWeave: Weave = gongramWeave.default()
 
 		const expectedWeave: Weave = {
 			columns: [ 0, 1, 2, 3, 4 ],
