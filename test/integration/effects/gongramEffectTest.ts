@@ -1,5 +1,5 @@
 import { constants, Effect, executeSelectedHoundstoothEffects, from, state, to, Unit } from '../../../../../src'
-import { activateTestMarkerCanvas, StandardTileExpectation, standardTileIsColors } from '../../../../../test'
+import { StandardTileExpectation, standardTileIsColors } from '../../../../../test'
 import { gongramEffect } from '../../../effects'
 
 const { BLACK, BLUE, GREEN, RED, WHITE } = constants
@@ -23,7 +23,6 @@ describe('gongram coloration', () => {
 				},
 			},
 		}
-		activateTestMarkerCanvas()
 
 		executeSelectedHoundstoothEffects.default({ houndstoothOverrides })
 
