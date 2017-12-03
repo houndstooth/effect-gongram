@@ -1,6 +1,7 @@
 import { NamedEffect } from '../../../src'
 import { GONGRAM_COLOR_SET } from '../constants'
 import { gongramSupertile, gongramWeave } from '../pattern'
+import GONGRAM_DESCRIPTION from './gongramDescription'
 
 const gongramEffect: NamedEffect = {
 	basePattern: {
@@ -12,6 +13,7 @@ const gongramEffect: NamedEffect = {
 			colorSet: GONGRAM_COLOR_SET,
 		},
 	},
+	description: GONGRAM_DESCRIPTION,
 	name: 'gongram',
 }
 
