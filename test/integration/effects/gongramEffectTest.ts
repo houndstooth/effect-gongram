@@ -18,9 +18,6 @@ describe('gongram coloration', () => {
 				tileSettings: {
 					tileSize,
 				},
-				viewSettings: {
-					canvasSize: to.Px(sufficientTileResolutionToDemonstratePattern * from.Unit(tileSize)),
-				},
 			},
 		}
 
