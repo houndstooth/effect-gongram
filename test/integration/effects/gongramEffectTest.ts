@@ -1,4 +1,4 @@
-import { appState, constants, Effect, executeSelectedHoundstoothEffects, from, to, Unit } from '../../../../../src'
+import { appState, constants, Effect, executeSelectedEffects, from, to, Unit } from '../../../../../src'
 import { StandardTileExpectation, standardTileIsColors } from '../../../../../test'
 import { gongramEffect } from '../../../effects'
 
@@ -9,8 +9,8 @@ describe('gongram coloration', () => {
 	it('arranges the 5 MTG colors by rows in the cycle of allies, and by columns in the cycle of enemies', async (done: DoneFn) => {
 		const tileSize: Unit = to.Unit(50)
 		const sufficientTileResolutionToDemonstratePattern: number = 10
-		appState.controls.selectedHoundstoothEffects = [ gongramEffect ]
-		const houndstoothOverrides: Effect = {
+		appState.controls.selectedEffects = [ gongramEffect ]
+		const overrides: Effect = {
 			basePattern: {
 				gridSettings: {
 					tileResolution: sufficientTileResolutionToDemonstratePattern,
@@ -21,7 +21,7 @@ describe('gongram coloration', () => {
 			},
 		}
 
-		executeSelectedHoundstoothEffects.default({ houndstoothOverrides })
+		executeSelectedEffects.default({ overrides })
 
 		setTimeout(() => {
 			let baseId: number = -8
