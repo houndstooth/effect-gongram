@@ -1,9 +1,11 @@
 import { Weave } from '../../../../../src'
 import { gongramWeave } from '../../../pattern'
 
+const subject: () => Weave = gongramWeave.default
+
 describe('gongram weave', () => {
 	it('rows go by 2s and columns by 1s', () => {
-		const actualWeave: Weave = gongramWeave.default()
+		const actualWeave: Weave = subject()
 
 		const expectedWeave: Weave = {
 			columns: [ 0, 1, 2, 3, 4 ],
