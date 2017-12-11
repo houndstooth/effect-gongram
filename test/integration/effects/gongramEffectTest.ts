@@ -1,7 +1,6 @@
 import { constants, Effect, executeSelectedEffects, from, to, Unit } from '../../../../../src/indexForTest'
-import { StandardTileExpectation, standardTileIsColors } from '../../../../../test'
+import { setAppStateForEffectTests, StandardTileExpectation, standardTileIsColors } from '../../../../../test'
 import { gongramEffect } from '../../../effects'
-import { setAppStateForEffectTests } from '../../../../../test'
 
 const { BLACK, BLUE, GREEN, RED, WHITE } = constants
 
