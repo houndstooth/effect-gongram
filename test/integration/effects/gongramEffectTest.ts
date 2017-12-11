@@ -1,6 +1,7 @@
-import { appState, constants, Effect, executeSelectedEffects, from, to, Unit } from '../../../../../src/indexForTest'
+import { constants, Effect, executeSelectedEffects, from, to, Unit } from '../../../../../src/indexForTest'
 import { StandardTileExpectation, standardTileIsColors } from '../../../../../test'
 import { gongramEffect } from '../../../effects'
+import { setAppStateForEffectTests } from '../../../../../test'
 
 const { BLACK, BLUE, GREEN, RED, WHITE } = constants
 
@@ -9,7 +10,7 @@ describe('gongram coloration', () => {
 	it('arranges the 5 MTG colors by rows in the cycle of allies, and by columns in the cycle of enemies', async (done: DoneFn) => {
 		const tileSize: Unit = to.Unit(50)
 		const sufficientTileResolutionToDemonstratePattern: number = 10
-		appState.controls.selectedEffects = [ gongramEffect ]
+		setAppStateForEffectTests.setSelectedEffects([ gongramEffect ])
 		const overrides: Effect = {
 			basePattern: {
 				gridSettings: {
