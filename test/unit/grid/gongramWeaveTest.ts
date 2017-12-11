@@ -1,4 +1,4 @@
-import { Weave } from '../../../../../src'
+import { Weave } from '../../../../../src/indexForTest'
 import { gongramWeave } from '../../../pattern'
 
 const subject: () => Weave = gongramWeave.default

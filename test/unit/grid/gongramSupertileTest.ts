@@ -1,4 +1,4 @@
-import { Supertile, to } from '../../../../../src'
+import { Supertile, to } from '../../../../../src/indexForTest'
 import { gongramSupertile } from '../../../pattern'
 
 const subject: () => Supertile = gongramSupertile.default

@@ -1,4 +1,4 @@
-import { appState, constants, Effect, executeSelectedEffects, from, to, Unit } from '../../../../../src'
+import { appState, constants, Effect, executeSelectedEffects, from, to, Unit } from '../../../../../src/indexForTest'
 import { StandardTileExpectation, standardTileIsColors } from '../../../../../test'
 import { gongramEffect } from '../../../effects'
 
