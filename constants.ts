@@ -1,6 +1,4 @@
-import { ColorSet, constants, to } from '../../src'
-
-const { BLACK, BLUE, GREEN, RED, WHITE } = constants
+import { BLACK, BLUE, ColorSet, GREEN, RED, to, WHITE } from '../../src'
 
 const GONGRAM_COLOR_SET: ColorSet = to.ColorSet([ BLACK, BLUE, WHITE, GREEN, RED ])
 

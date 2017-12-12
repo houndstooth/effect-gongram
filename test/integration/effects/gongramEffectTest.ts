@@ -1,8 +1,17 @@
-import { constants, Effect, executeSelectedEffects, from, to, Unit } from '../../../../../src/indexForTest'
+import {
+	BLACK,
+	BLUE,
+	Effect,
+	executeSelectedEffects,
+	from,
+	GREEN,
+	RED,
+	to,
+	Unit,
+	WHITE,
+} from '../../../../../src/indexForTest'
 import { setAppStateForEffectTests, StandardTileExpectation, standardTileIsColors } from '../../../../../test'
 import { gongramEffect } from '../../../effects'
-
-const { BLACK, BLUE, GREEN, RED, WHITE } = constants
 
 describe('gongram coloration', () => {
 	// tslint:disable-next-line:max-line-length
