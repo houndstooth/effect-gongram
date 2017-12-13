@@ -1,10 +1,9 @@
 import { Supertile, to } from '../../../../../src/indexForTest'
 import { gongramSupertile } from '../../../pattern'
 
-const subject: () => Supertile = gongramSupertile.default
-
 describe('gongram supertile', () => {
 	it('makes a rank-2 array of addresses for 5 colors, one dimension by 2s and the other by 1s', () => {
+		const subject: () => Supertile = gongramSupertile.default
 		const actualSupertile: Supertile = subject()
 
 		const expectedSupertile: Supertile = to.Supertile([
