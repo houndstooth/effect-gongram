@@ -1,7 +1,6 @@
 import {
 	BLACK,
 	BLUE,
-	Effect,
 	executeSelectedEffects,
 	from,
 	GREEN,
@@ -19,7 +18,7 @@ describe('gongram coloration', () => {
 		const tileSize: Unit = to.Unit(50)
 		const sufficientTileResolutionToDemonstratePattern: number = 10
 		setAppStateForEffectTests.setSelectedEffects([ gongramEffect ])
-		const overrides: Effect = {
+		setAppStateForEffectTests.setOverrides({
 			basePattern: {
 				gridSettings: {
 					tileResolution: sufficientTileResolutionToDemonstratePattern,
@@ -28,9 +27,9 @@ describe('gongram coloration', () => {
 					tileSize,
 				},
 			},
-		}
+		})
 
-		executeSelectedEffects.default({ overrides })
+		executeSelectedEffects.default()
 
 		setTimeout(() => {
 			let baseId: number = -8
