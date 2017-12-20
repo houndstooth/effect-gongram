@@ -1,7 +1,7 @@
 import {
 	BLACK,
 	BLUE,
-	executeSelectedEffects,
+	executePattern,
 	from,
 	GREEN,
 	RED,
@@ -30,7 +30,7 @@ describe('gongram coloration', () => {
 			},
 		})
 
-		executeSelectedEffects.default()
+		executePattern.default()
 
 		setTimeout(() => {
 			let baseId: number = -8
