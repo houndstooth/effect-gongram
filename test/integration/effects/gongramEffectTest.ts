@@ -17,7 +17,8 @@ describe('gongram coloration', () => {
 	it('arranges the 5 MTG colors by rows in the cycle of allies, and by columns in the cycle of enemies', async (done: DoneFn) => {
 		const tileSize: Unit = to.Unit(50)
 		const sufficientTileResolutionToDemonstratePattern: number = 10
-		setAppStateForEffectTests.setSelectedEffects([ gongramEffect ])
+		setAppStateForEffectTests.setAvailableEffects({ gongram: gongramEffect })
+		setAppStateForEffectTests.setSelectedEffects([ 'gongram' ])
 		setAppStateForEffectTests.setOverrides({
 			basePattern: {
 				gridSettings: {
